@@ -26,3 +26,27 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Header Component */
+
+.logo {
+  height: 150px;
+}
+.background {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding-left: 1em;
+}
