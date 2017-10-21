@@ -6,9 +6,9 @@ import thunk from 'redux-thunk';
 import './App.css';
 import Header from './components/header';
 import Navigation from './components/navigation';
-import Guild from './pages/guild';
-import Members from './pages/member';
-import Upgrades from './pages/upgrade';
+import Guild from './containers/guild';
+import Members from './containers/member';
+import Upgrades from './containers/upgrade';
 import guild from './reducers/guild';
 
 function logger({ getState }) {
