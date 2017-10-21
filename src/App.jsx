@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './App.css';
 import Header from './components/header';
 import Navigation from './components/navigation';
+import Guild from './pages/guild';
+import Members from './pages/member';
+import Upgrades from './pages/upgrade';
 import guild from './reducers/guild';
 
 function logger({ getState }) {
@@ -26,8 +30,11 @@ const App = () => (
     <div className="App">
       <Header />
       <Navigation />
-      <div className="App-intro">
-      </div>
+      <Switch>
+        <Route exact path='/' component={Guild} />
+        <Route path='/members' component={Members} />
+        <Route path='/upgrades' component={Upgrades} />
+      </Switch>
     </div>
   </Provider>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Member = ({ onClick, name, rank }) => (
+const member = ({ onClick, name, rank }) => (
   <li
     onClick={onClick}
   >
@@ -9,10 +9,10 @@ const Member = ({ onClick, name, rank }) => (
   </li>
 );
 
-Member.propTypes = {
+member.propTypes = {
   onClick: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   rank: PropTypes.string.isRequired
 };
 
-export default Member;
+export default memberActions;

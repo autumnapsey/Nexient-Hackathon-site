@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import guildActions from '../actions/Guild';
 import guild from '../reducers/guild';
 
 class GuildPage extends Component {
@@ -19,4 +20,4 @@ export default connect(
 
 	}),
 	(dispatch) => ({ actions: bindActionCreators({...guildActions}, dispatch)})
-)(NotesPage);
+)(GuildPage);

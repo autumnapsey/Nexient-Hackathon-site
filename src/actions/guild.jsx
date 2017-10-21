@@ -3,8 +3,11 @@ const url = 'https://api.guildwars2.com/v2/guild/950609C1-F0EA-E611-80D4-E4115BD
 function loadGuild(dispatch) {
   return fetch(url)
     .then(res => res.json())
+		.then(console.log(res))
     .then(
       data => dispatch({ type: 'LOAD_GUILD_SUCCESS', data }),
       err => dispatch({ type: 'LOAD_GUILD_FAILURE', err })
     );
-}
+};
+
+export default guildActions;

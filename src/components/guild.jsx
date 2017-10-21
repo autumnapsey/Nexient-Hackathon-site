@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const guild = () => (
-  <p></p>
+  <p>guild</p>
 );
 
 guild.propTypes = {
