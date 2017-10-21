@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Upgrades from '../components/upgrades';
 import upgrade from '../reducers/upgrade';
 
 class upgradePage extends Component {
@@ -9,7 +10,7 @@ class upgradePage extends Component {
 	}
 	render(){
 		return (
-			<upgrade />
+			<Upgrades />
 		);
 	}
 }

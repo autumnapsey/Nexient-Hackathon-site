@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Members from '../components/members';
 import member from '../reducers/member';
 
 class MemberPage extends Component {
@@ -9,7 +10,7 @@ class MemberPage extends Component {
 	}
 	render(){
 		return (
-			<member />
+			<Members />
 		);
 	}
 }
