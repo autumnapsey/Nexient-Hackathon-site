@@ -9,6 +9,9 @@ class GuildList extends Component {
 	}
 
 	render() {
+		let motd;
+		let message;
+
 		if (this.props.hasErrored) {
 			return (<p>Sorry, there was an error loading the guild.</p>);
 		}
@@ -17,10 +20,20 @@ class GuildList extends Component {
 			return (<p>Loading</p>);
 		}
 
+		if (this.props.guild.motd) {
+			motd = this.props.guild.motd.split('\n');
+
+			message = motd.map((line) => {
+				return (
+					<p>{ line }</p>
+				)
+            });
+		}
+
 		return (
 			<ul>
 				<li> Level: {this.props.guild.level} </li>
-				<li> MotD: {this.props.guild.motd} </li>
+				<li> MotD: {message} </li>
 				<li> Aetherium: {this.props.guild.aetherium} </li>
 				<li> Favor: {this.props.guild.favor} </li>
 				<li> Members: {this.props.guild.member_count} </li>
