@@ -19,11 +19,11 @@ class GuildList extends Component {
 
 		return (
 			<ul>
-				{this.props.guild.map((guild) => (
-					<li key={guild.id}>
-						{guild.label}
-					</li>
-				))}
+				<li> Level: {this.props.guild.level} </li>
+				<li> MotD: {this.props.guild.motd} </li>
+				<li> Aetherium: {this.props.guild.aetherium} </li>
+				<li> Favor: {this.props.guild.favor} </li>
+				<li> Members: {this.props.guild.member_count} </li>
 			</ul>
 		);
 	}
