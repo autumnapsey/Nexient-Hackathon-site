@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './App.css';
 import Header from './components/header';
+import Navigation from './components/navigation';
 import guild from './reducers/guild';
 
 function logger({ getState }) {
@@ -23,7 +24,8 @@ const store = createStore(
 const App = () => (
   <Provider store={store}>
     <div className="App">
-      <Header></Header>
+      <Header />
+      <Navigation />
       <div className="App-intro">
       </div>
     </div>
