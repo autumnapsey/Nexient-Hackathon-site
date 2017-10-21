@@ -6,9 +6,9 @@ import thunk from 'redux-thunk';
 import './App.css';
 import Header from './components/header';
 import Navigation from './components/navigation';
-import Guild from './containers/guild';
-import Members from './containers/member';
-import Upgrades from './containers/upgrade';
+import GuildPage from './containers/guild';
+import MemberPage from './containers/member';
+import UpgradePage from './containers/upgrade';
 import guild from './reducers/guild';
 
 function logger({ getState }) {
@@ -31,9 +31,9 @@ const App = () => (
       <Header />
       <Navigation />
       <Switch>
-        <Route exact path='/' component={Guild} />
-        <Route path='/members' component={Members} />
-        <Route path='/upgrades' component={Upgrades} />
+        <Route exact path='/' component={GuildPage} />
+        <Route path='/members' component={MemberPage} />
+        <Route path='/upgrades' component={UpgradePage} />
       </Switch>
     </div>
   </Provider>

@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import Upgrades from '../components/upgrades';
 import upgrade from '../reducers/upgrade';
 
-class upgradePage extends Component {
+class UpgradePage extends Component {
 	componentWillMount(){
 		// this.props.actions.loadUpgrades();
 	}
@@ -20,4 +20,4 @@ export default connect(
 
 	}),
 	(dispatch) => ({ actions: bindActionCreators({}, dispatch)})
-)(upgradePage);
+)(UpgradePage);
