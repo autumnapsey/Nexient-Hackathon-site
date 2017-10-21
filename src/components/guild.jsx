@@ -10,11 +10,11 @@ class GuildList extends Component {
 
 	render() {
 		if (this.props.hasErrored) {
-			return <p>Sorry, there was an error loading the guild.</p>;
+			return (<p>Sorry, there was an error loading the guild.</p>);
 		}
 
 		if (this.props.isLoading) {
-			return <p>Loading</p>;
+			return (<p>Loading</p>);
 		}
 
 		return (

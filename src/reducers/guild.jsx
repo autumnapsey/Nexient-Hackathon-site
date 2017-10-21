@@ -1,5 +1,3 @@
-import { List } from 'immutable';
-
 export function guildHasErrored(state = false, action) {
     switch (action.type) {
         case 'GUILD_HAS_ERRORED':
