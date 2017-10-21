@@ -1,3 +1,5 @@
+import { List } from 'immutable';
+
 export function guildHasErrored(state = false, action) {
     switch (action.type) {
         case 'GUILD_HAS_ERRORED':
@@ -18,7 +20,7 @@ export function guildIsLoading(state = false, action) {
     }
 }
 
-export function guild(state = [], action) {
+export function guild(state = {}, action) {
     switch (action.type) {
         case 'GUILD_FETCH_DATA_SUCCESS':
             return action.guild;
