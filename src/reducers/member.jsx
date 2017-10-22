@@ -1,5 +1,3 @@
-import { List } from 'immutable';
-
 export function memberHasErrored(state = false, action) {
     switch (action.type) {
         case 'MEMBER_HAS_ERRORED':
