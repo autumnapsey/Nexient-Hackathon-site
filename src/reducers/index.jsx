@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { guild, guildHasErrored, guildIsLoading } from './guild';
 import { member, memberHasErrored, memberIsLoading } from './member';
-import { upgrade, upgradeHasErrored, upgradeIsLoading } from './upgrade';
+import { upgradeList, upgradeListHasErrored, upgradeListIsLoading } from './upgradeList';
 
 export default combineReducers({
     guild,
@@ -10,7 +10,7 @@ export default combineReducers({
     member,
     memberHasErrored,
     memberIsLoading,
-    upgrade,
-    upgradeHasErrored,
-    upgradeIsLoading
+    upgradeList,
+    upgradeListHasErrored,
+    upgradeListIsLoading
 });

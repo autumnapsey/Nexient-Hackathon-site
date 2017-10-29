@@ -6,7 +6,7 @@ import Header from './components/header';
 import Navigation from './components/navigation';
 import GuildPage from './components/guild';
 import MemberPage from './components/members';
-import UpgradePage from './components/upgrades';
+import UpgradePage from './components/upgradesList';
 import configureStore from './store/configureStore';
 
 const store = configureStore();

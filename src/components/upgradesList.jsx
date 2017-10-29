@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {upgradeFetchData, upgradeFetchIndividualData} from '../actions/upgrade';
+import {upgradeListFetchData} from '../actions/upgradeList';
 import PropTypes from 'prop-types';
 
 class UpgradeList extends Component {
@@ -19,7 +19,7 @@ class UpgradeList extends Component {
 
 		return (
 			<ul>
-        {this.props.upgrade.map((value, index) => (
+        {this.props.upgradeList.map((value, index) => (
           <li key={index}>
             {value}
           </li>
@@ -31,18 +31,18 @@ class UpgradeList extends Component {
 
 UpgradeList.propTypes = {
 	fetchData: PropTypes.func.isRequired,
-	upgrade: PropTypes.array.isRequired,
+	upgradeList: PropTypes.array.isRequired,
 	hasErrored: PropTypes.bool.isRequired,
 	isLoading: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => {
-	return {upgrade: state.upgrade, hasErrored: state.upgradeHasErrored, isLoading: state.upgradeIsLoading};
+	return {upgradeList: state.upgradeList, hasErrored: state.upgradeListHasErrored, isLoading: state.upgradeListIsLoading};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		fetchData: (url) => dispatch(upgradeFetchData(url))
+		fetchData: (url) => dispatch(upgradeListFetchData(url))
 	};
 };
 
