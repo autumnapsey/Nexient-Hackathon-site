@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {guildFetchData} from '../actions/guild';
 import PropTypes from 'prop-types';
+import '../App.css';
 
 class GuildList extends Component {
 	componentDidMount() {
 		this.props.fetchData('https://api.guildwars2.com/v2/guild/950609C1-F0EA-E611-80D4-E4115BDFF975?access_token=DEFB42BA-E677-D04D-99F3-4CA43C7B5B753C822DBF-3DA7-4748-8F71-8A5CECF25DD6');
-	}
+	};
 
 	render() {
 		let motd;
@@ -27,17 +28,21 @@ class GuildList extends Component {
 				return (
 					<p>{ line }</p>
 				)
-            });
+						});
 		}
 
 		return (
-			<ul>
-				<li> Level: {this.props.guild.level} </li>
-				<li> MotD: {message} </li>
-				<li> Aetherium: {this.props.guild.aetherium} </li>
-				<li> Favor: {this.props.guild.favor} </li>
-				<li> Members: {this.props.guild.member_count} </li>
-			</ul>
+			<section className='guildInfo'>
+				<div> Level: {this.props.guild.level} </div>
+				<br />
+				<div className='infoDiv'>
+					<div className='infoElement'> Aetherium: {this.props.guild.aetherium} </div>
+					<div className='infoElement'> Favor: {this.props.guild.favor} </div>
+					<div className='infoElement'> Members: {this.props.guild.member_count} </div>
+				</div>
+				<br />
+				<div> MotD: {message} </div>
+			</section>
 		);
 	}
 }

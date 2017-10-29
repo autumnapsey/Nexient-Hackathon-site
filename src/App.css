@@ -3,6 +3,11 @@
   height: 80px;
 }
 
+.App-logo-r {
+  animation: App-logo-spin-r infinite 20s linear;
+  height: 80px;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -19,6 +24,11 @@
 }
 
 @keyframes App-logo-spin {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes App-logo-spin-r {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
@@ -70,3 +80,15 @@
 .navigation a:hover {
   color: #fff;
 }
+
+/* guild component */
+.guildInfo {
+  text-align: center;
+}
+
+.infoDiv {
+	color: #000;
+	display: flex;
+	flex-direction: row;
+  justify-content: space-evenly;
+};

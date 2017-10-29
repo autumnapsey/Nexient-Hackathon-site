@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../index.css';
+import '../App.css';
 
 const Navigation = () => (
     <div className="navigation">
@@ -13,4 +13,3 @@ const Navigation = () => (
 );
 
 export default Navigation;
-
