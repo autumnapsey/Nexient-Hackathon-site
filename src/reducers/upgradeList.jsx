@@ -1,6 +1,6 @@
 export function upgradeListHasErrored(state = false, action) {
     switch (action.type) {
-        case 'UPGRADE_HAS_ERRORED':
+        case 'UPGRADE_LIST_HAS_ERRORED':
             return action.hasErrored;
 
         default:
@@ -10,7 +10,7 @@ export function upgradeListHasErrored(state = false, action) {
 
 export function upgradeListIsLoading(state = false, action) {
     switch (action.type) {
-        case 'UPGRADE_IS_LOADING':
+        case 'UPGRADE_LIST_IS_LOADING':
             return action.isLoading;
 
         default:
@@ -20,8 +20,8 @@ export function upgradeListIsLoading(state = false, action) {
 
 export function upgradeList(state = [], action) {
     switch (action.type) {
-        case 'UPGRADE_FETCH_DATA_SUCCESS':
-            return action.upgrade;
+        case 'UPGRADE_LIST_FETCH_DATA_SUCCESS':
+            return action.upgradeList;
 
         default:
             return state;

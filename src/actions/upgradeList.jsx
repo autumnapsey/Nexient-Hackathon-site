@@ -1,13 +1,13 @@
 export function upgradeListHasErrored(bool) {
-	return {type: 'UPGRADE_HAS_ERRORED', hasErrored: bool};
+	return {type: 'UPGRADE_LIST_HAS_ERRORED', hasErrored: bool};
 }
 
 export function upgradeListIsLoading(bool) {
-	return {type: 'UPGRADE_IS_LOADING', isLoading: bool};
+	return {type: 'UPGRADE_LIST_IS_LOADING', isLoading: bool};
 }
 
-export function upgradeListFetchDataSuccess(upgrade) {
-	return {type: 'UPGRADE_FETCH_DATA_SUCCESS', upgrade};
+export function upgradeListFetchDataSuccess(upgradeList) {
+	return {type: 'UPGRADE_LIST_FETCH_DATA_SUCCESS', upgradeList};
 }
 
 export function upgradeListFetchData(url) {
